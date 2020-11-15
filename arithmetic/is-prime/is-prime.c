@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "common-functions.h"
+#include <conio.h>
+#include <common-functions.h>
 
 int isPrime(int x) {
     if (x == 2) return 1;
@@ -16,10 +17,10 @@ int isPrime(int x) {
     return isPrime;
 }
 
-int isPrimeDemo() {
-    int x;
+void isPrimeDemo() {
+    int x, command;
+    printf(">>> Start >>>\n");
     do {
-        printf("---Start---\n");
         printf("Enter number:\n");
         x = scanInt();
         int result = isPrime(x);
@@ -28,9 +29,10 @@ int isPrimeDemo() {
         } else {
             printf("%d is not a prime", x);
         }
-        printf("---End---\n\n\n");
-    } while (x > 0);
-    return 0;
+        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
+        command = _getch();
+    } while (command == ENTER);
+    printf("<<< End <<<\n\n\n");
 }
 
 

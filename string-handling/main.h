@@ -1,6 +1,6 @@
-#ifndef BASIC_ALGORITHM_MAIN_H
-#define BASIC_ALGORITHM_MAIN_H
+#ifndef STRING_HANDLING_ALGORITHM_MAIN_H
+#define STRING_HANDLING_ALGORITHM_MAIN_H
 
-int checkStrongPasswordDemo();
+void checkStrongPasswordDemo();
 
-#endif //BASIC_ALGORITHM_MAIN_H
+#endif //STRING_HANDLING_ALGORITHM_MAIN_H

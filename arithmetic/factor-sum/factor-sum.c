@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <conio.h>
+#include <common-functions.h>
+
 int solve(int n) {
     int sum = 0;
     int i = 2;
@@ -19,6 +23,12 @@ int factorSum(int n) {
     return n;
 }
 
-int factorSumDemo() {
-
+void factorSumDemo() {
+    int command;
+    printf(">>> Start >>>\n");
+    do {
+        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
+        command = _getch();
+    } while (command == ENTER);
+    printf("<<< END <<<\n");
 }

@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <common-functions.h>
-#include "check-strong-password.h"
+#include "main.h"
 #define EXIT_CODE 0
+
+const int ENTER = 13;
 
 void mapSelection(const int selection) {
     switch (selection) {
@@ -50,7 +52,7 @@ int main() {
         printf("7. Pages numbering\n");
         printf("8. Primes Sum\n");
         printf("9. Count number of Zero digits\n");
-        printf("Choose an algorithm, or type 0 to exit:\n");
+        printf("0. Exit:\n");
         command = scanInt();
         mapSelection(command);
     } while (command != EXIT_CODE);

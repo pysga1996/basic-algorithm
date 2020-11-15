@@ -15,6 +15,6 @@ target_link_libraries(arithmetic-algorithm libcommon-functions.dll.a)
 
 file(GLOB STRING_HANDLING_SRC string-handling/*.c string-handling/*.h string-handling/*/*.c string-handling/*/*.h lib/common-functions.h)
 
-add_executable(string-handling ${STRING_HANDLING_SRC})
+add_executable(string-handling-algorithm ${STRING_HANDLING_SRC})
 
-target_link_libraries(string-handling libcommon-functions.dll.a)
+target_link_libraries(string-handling-algorithm libcommon-functions.dll.a)

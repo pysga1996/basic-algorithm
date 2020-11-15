@@ -1,6 +1,8 @@
 #ifndef COMMON_FUNCTIONS_SCAN_UTIL_H
 #define COMMON_FUNCTIONS_SCAN_UTIL_H
 
+extern const int ENTER;
+
 typedef struct arr_bool {
     int* arr;
     int size;
