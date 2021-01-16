@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <common-functions.h>
-#include "main.h"
+#include "amend-the-sentence.h"
+
 #define EXIT_CODE 0
 
 void mapSelection(const int selection) {
     switch (selection) {
         case 1:
             checkStrongPasswordDemo();
+            break;
+        case 2:
             break;
         default:
             break;
