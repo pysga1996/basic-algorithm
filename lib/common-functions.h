@@ -1,8 +1,6 @@
 #ifndef COMMON_FUNCTIONS_SCAN_UTIL_H
 #define COMMON_FUNCTIONS_SCAN_UTIL_H
 
-extern const int ENTER;
-
 typedef struct arr_bool {
     int* arr;
     int size;
@@ -98,5 +96,13 @@ arr_string scanStringArr(int length);
 void printStringArr(arr_string arrString);
 
 void freeStringArr(arr_string arrString);
+
+int isUppercaseWord(char character);
+
+int isLowercaseWord(char character);
+
+int isDigit(char character);
+
+int isWordOrDigit(char character);
 
 #endif //COMMON_FUNCTIONS_SCAN_UTIL_H

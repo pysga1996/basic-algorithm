@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <common-functions.h>
-#include "check-strong-password.h"
+#include "main.h"
 #define EXIT_CODE 0
 
 const int ENTER = 13;
