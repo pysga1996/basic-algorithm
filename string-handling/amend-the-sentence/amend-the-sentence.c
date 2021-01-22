@@ -1,23 +1,22 @@
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
 #include <common-functions.h>
 
 char* amendTheSentence(char *s);
 
 void amendTheSentenceDemo() {
-    char sentence[256];
+    char sentence[512];
     int command;
     printf(">>> Start >>>\n");
     do {
         printf("Enter a sentence:\n");
-        scanf("%s", sentence);
+        scanString(sentence);
         char *result = amendTheSentence(sentence);
         printf("Result: %s\n", result);
         free(result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

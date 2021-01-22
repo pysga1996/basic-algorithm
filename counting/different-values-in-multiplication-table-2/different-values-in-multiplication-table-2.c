@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <conio.h>
 #include <common-functions.h>
 
 int differentValuesInMultiplicationTable2(int n, int m);
@@ -9,7 +8,6 @@ void differentValuesInMultiplicationTable2Demo() {
     int command;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter first number:\n");
         n1 = scanInt();
         printf("Enter second number:\n");
@@ -17,8 +15,8 @@ void differentValuesInMultiplicationTable2Demo() {
         result = differentValuesInMultiplicationTable2(n1, n2);
         printf("Common character count of the 2 given strings: %d!\n", result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

@@ -92,6 +92,8 @@ typedef struct matrix_double {
  * Scanner Utility
  */
 
+void clearStdIn(void);
+
 short int scanShortInt();
 
 int scanInt();
@@ -109,6 +111,8 @@ unsigned long long int scanUnsignedLongLongInt();
 float scantFloat();
 
 long double scanLongDouble();
+
+void scanString(char* string);
 
 /*
  * Array Utility

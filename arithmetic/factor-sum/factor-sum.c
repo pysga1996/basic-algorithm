@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <common-functions.h>
 
 int factorSum(int n);
@@ -11,14 +10,13 @@ void factorSumDemo() {
     int x;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
-        printf("Enter a number to find digits product:\n");
+        printf("Enter a number to find factor sum:\n");
         x = scanInt();
         int result = factorSum(x);
         printf("Factor sum of %d is %d\n", x, result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< END <<<\n");
 }
 

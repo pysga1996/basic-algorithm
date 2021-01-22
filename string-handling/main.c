@@ -1,8 +1,20 @@
 #include <stdio.h>
 #include <common-functions.h>
 #include "main.h"
-
 #define EXIT_CODE 0
+
+void mapSelection(int selection);
+
+int main() {
+    int command;
+    arr_char* menu = readMenu("string-handling.menu.txt");
+    do {
+        printf("%s", menu->content);
+        command = scanInt();
+        mapSelection(command);
+    } while (command != EXIT_CODE);
+    deleteString(menu);
+}
 
 void mapSelection(const int selection) {
     switch (selection) {
@@ -36,15 +48,4 @@ void mapSelection(const int selection) {
         default:
             break;
     }
-}
-
-int main() {
-    int command;
-    arr_char* menu = readMenu("string-handling.menu.txt");
-    do {
-        printf("%s", menu->content);
-        command = scanInt();
-        mapSelection(command);
-    } while (command != EXIT_CODE);
-    deleteString(menu);
 }

@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
 #include <common-functions.h>
 
 char* lineEncoding(char* s);
@@ -12,20 +11,18 @@ char* convertNumToChar(int number);
 int countDigits(int n);
 
 void lineEncodingDemo() {
-    char input[256];
+    char input[512];
     int command;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter a string:\n");
-        scanf("%[^\n]s", input);
-//        fgets (input, 256, stdin);
+        scanString(input);
         char *result = lineEncoding(input);
         printf("Result: %s\n", result);
         free(result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

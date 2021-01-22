@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <common-functions.h>
-#include <conio.h>
 
 int charactersRearrangement(char* string1, char* string2);
 
@@ -8,23 +7,21 @@ void charactersRearrangementDemo() {
     char string1[512];
     char string2[512];
     int command;
-
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter the first string:\n");
-        scanf("%s", string1);
+        scanString(string1);
         printf("Enter the second string:\n");
-        scanf("%s", string2);
+        scanString(string2);
         printf("Enter array length:\n");
         if (charactersRearrangement(string1, string2)) {
-            printf("All element frequencies are equal!\n");
+            printf("The second string can be rearranged to match the first string!\n");
         } else {
-            printf("All element frequencies are not equal!\n");
+            printf("The second string cannot be rearranged to match the first string!\n");
         }
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

@@ -1,24 +1,23 @@
 #include <string.h>
-#include <conio.h>
 #include <common-functions.h>
 
 int checkPalindrome(char *inputString);
 
 void checkPalindromeDemo() {
-    char inputString[256];
+    char inputString[512];
     int command;
     printf(">>> Start >>>\n");
     do {
         printf("Enter a string:\n");
-        scanf("%s", inputString);
+        scanString(inputString);
         if (checkPalindrome(inputString)) {
             printf("Your string is a palindrome string!\n");
         } else {
             printf("Your string is not a palindrome string!\n");
         }
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

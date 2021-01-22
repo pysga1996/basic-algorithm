@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <conio.h>
+
 #include <math.h>
 #include <common-functions.h>
 
@@ -11,7 +11,6 @@ void checkEqualFrequencyDemo() {
     int command;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter array length:\n");
         arrLength = scanInt();
         arrInt = scanIntArr(arrLength);
@@ -21,8 +20,8 @@ void checkEqualFrequencyDemo() {
             printf("All element frequencies are not equal!\n");
         }
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     freeIntArr(arrInt);
     printf("<<< End <<<\n\n\n");
 }

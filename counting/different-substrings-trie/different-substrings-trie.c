@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-#include <conio.h>
 #include <common-functions.h>
 
 /*
@@ -10,19 +9,18 @@
 int differentSubstringsTrie(char* inputString);
 
 void differentSubstringsTrieDemo() {
-    char str[256];
+    char str[512];
     int command;
     int result;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter a string:\n");
-        scanf("%s", str);
+        scanString(str);
         result = differentSubstringsTrie(str);
         printf("Number of different substrings of the given string: %d!\n", result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

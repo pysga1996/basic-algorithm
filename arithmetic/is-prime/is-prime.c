@@ -1,4 +1,4 @@
-#include <conio.h>
+
 #include <common-functions.h>
 
 int isPrime(int x);
@@ -7,7 +7,6 @@ void isPrimeDemo() {
     int x, command;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter number:\n");
         x = scanInt();
         int result = isPrime(x);
@@ -17,8 +16,8 @@ void isPrimeDemo() {
             printf("%d is not a prime\n", x);
         }
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 

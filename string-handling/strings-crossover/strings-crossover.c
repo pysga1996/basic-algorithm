@@ -1,5 +1,4 @@
 #include <string.h>
-#include <conio.h>
 #include <common-functions.h>
 
 int stringsCrossover(arr_string inputArray, char *result);
@@ -7,24 +6,22 @@ int stringsCrossover(arr_string inputArray, char *result);
 int check(const char *a, const char *b, const char *c);
 
 void stringsCrossoverDemo() {
-    char mergedString[256];
+    char mergedString[512];
     int length;
     int command;
     printf(">>> Start >>>\n");
     do {
-        fflush(stdin);
         printf("Enter length of strings array:\n");
         length = scanInt();
         arr_string inputArr = scanStringArr(length);
         printf("Enter merged string:\n");
-        fflush(stdin);
-        scanf("%[^\n]s", mergedString);
+        scanString(mergedString);
         int result = stringsCrossover(inputArr, mergedString);
         freeStringArr(inputArr);
         printf("Result: %d\n", result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
+        command = getc(stdin);
+    } while (command == NEWLINE);
     printf("<<< End <<<\n\n\n");
 }
 
