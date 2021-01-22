@@ -1,5 +1,32 @@
 #ifndef COMMON_FUNCTIONS_SCAN_UTIL_H
 #define COMMON_FUNCTIONS_SCAN_UTIL_H
+#include <stdio.h>
+
+extern const char SPACE;
+
+extern const char TERMINATOR;
+
+extern const char QUESTION_MARK;
+
+extern const char COMMA;
+
+extern const char DOT;
+
+extern const char SEMICOLON;
+
+extern const char SLASH;
+
+extern const char BACKSLASH;
+
+extern const char NEWLINE;
+
+extern const char TAB;
+
+extern const char ESCAPE_KEY;
+
+extern const int ENTER_KEY;
+
+extern const char* SPECIAL_CHARACTERS;
 
 typedef struct arr_bool {
     int* arr;
@@ -12,8 +39,8 @@ typedef struct matrix_bool {
 } matrix_bool;
 
 typedef struct arr_char{
-    char* arr;
-    int size;
+    char* content;
+    unsigned long long length;
 } arr_char;
 
 typedef struct arr_string {
@@ -61,6 +88,10 @@ typedef struct matrix_double {
     int size;
 } matrix_double;
 
+/*
+ * Scanner Utility
+ */
+
 short int scanShortInt();
 
 int scanInt();
@@ -78,6 +109,10 @@ unsigned long long int scanUnsignedLongLongInt();
 float scantFloat();
 
 long double scanLongDouble();
+
+/*
+ * Array Utility
+ */
 
 arr_int scanIntArr(int length);
 
@@ -97,12 +132,40 @@ void printStringArr(arr_string arrString);
 
 void freeStringArr(arr_string arrString);
 
-int isUppercaseWord(char character);
+/*
+ * Number Utility
+ */
 
-int isLowercaseWord(char character);
+int min(int a, int b);
+
+int max(int a, int b);
+
+/*
+ * String Utility
+ */
+
+int isUppercaseCharacter(char character);
+
+int isLowercaseCharacter(char character);
 
 int isDigit(char character);
 
 int isWordOrDigit(char character);
+
+int isSpecialCharacter(char character);
+
+arr_char* createString();
+
+void concatString(arr_char* aChar, char* characters);
+
+void deleteString(arr_char* aChar);
+
+/*
+ * File Utility
+ */
+
+arr_char* readMenu(char* menuFileName);
+
+void readMenuNoBuffer(FILE *menuPtr);
 
 #endif //COMMON_FUNCTIONS_SCAN_UTIL_H

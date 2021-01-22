@@ -1,13 +1,13 @@
-#include <stdio.h>
 #include <common-functions.h>
 #include "main.h"
+
 #define EXIT_CODE 0
 
 void mapSelection(int selection);
 
 int main() {
     int command;
-    arr_char* menu = readMenu("arithmetic.menu.txt");
+    arr_char *menu = readMenu("counting.menu.txt");
     do {
         printf("%s", menu->content);
         command = scanInt();
@@ -17,37 +17,27 @@ int main() {
     return 0;
 }
 
-void mapSelection(const int selection) {
+void mapSelection(int selection) {
     switch (selection) {
         case 1:
-            isPrimeDemo();
+            commonCharacterCountDemo();
             break;
         case 2:
-            factorSumDemo();
+            differentValuesInMultiplicationTable2Demo();
             break;
         case 3:
-            greatestCommonPrimeDivisorDemo();
+            checkEqualFrequencyDemo();
             break;
         case 4:
-            maxFractionDemo();
+            differentSymbolsNaiveDemo();
             break;
         case 5:
-            lastDigitDiffZeroDemo();
+            differentSubstringsTrieDemo();
             break;
         case 6:
-            digitsProductDemo();
-            break;
-        case 7:
-            pagesNumberingDemo();
-            break;
-        case 8:
-            primeSumDemo();
-            break;
-        case 9:
-            numberZeroDigitsDemo();
+            charactersRearrangementDemo();
             break;
         default:
             break;
     }
 }
-

@@ -4,8 +4,6 @@
 
 #define EXIT_CODE 0
 
-const int ENTER_KEY = 13;
-
 void mapSelection(const int selection) {
     switch (selection) {
         case 1:
@@ -42,19 +40,11 @@ void mapSelection(const int selection) {
 
 int main() {
     int command;
+    arr_char* menu = readMenu("string-handling.menu.txt");
     do {
-        printf("---String Handling Algorithm---\n");
-        printf("1. Check a pass is strong or weak\n");
-        printf("2. Amend the sentence\n");
-        printf("3. Check palindrome string\n");
-        printf("4. Format string\n");
-        printf("5. Check tandem string\n");
-        printf("6. Truncate string\n");
-        printf("7. Strings crossover\n");
-        printf("8. Question correction\n");
-        printf("9. Line encoding\n");
+        printf("%s", menu->content);
         command = scanInt();
         mapSelection(command);
     } while (command != EXIT_CODE);
-    printf("---End---\n");
+    deleteString(menu);
 }

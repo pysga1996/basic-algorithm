@@ -1,8 +1,6 @@
 #ifndef STRING_HANDLING_ALGORITHM_MAIN_H
 #define STRING_HANDLING_ALGORITHM_MAIN_H
 
-extern const int ENTER_KEY;
-
 void checkStrongPasswordDemo();
 
 void amendTheSentenceDemo();

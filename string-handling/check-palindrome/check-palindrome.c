@@ -1,19 +1,8 @@
-#include <stdio.h>
 #include <string.h>
 #include <conio.h>
-#include "../main.h"
+#include <common-functions.h>
 
-int checkPalindrome(char *inputString) {
-    int isPalindrome = 1;
-    unsigned long long strLength = strlen(inputString);
-    for (int i = 0; i < strLength; ++i) {
-        if (inputString[i] != inputString[strLength - 1 - i]) {
-            isPalindrome = 0;
-            break;
-        }
-    }
-    return isPalindrome;
-}
+int checkPalindrome(char *inputString);
 
 void checkPalindromeDemo() {
     char inputString[256];
@@ -31,4 +20,16 @@ void checkPalindromeDemo() {
         command = _getch();
     } while (command == ENTER_KEY);
     printf("<<< End <<<\n\n\n");
+}
+
+int checkPalindrome(char *inputString) {
+    int isPalindrome = 1;
+    unsigned long long strLength = strlen(inputString);
+    for (int i = 0; i < strLength; ++i) {
+        if (inputString[i] != inputString[strLength - 1 - i]) {
+            isPalindrome = 0;
+            break;
+        }
+    }
+    return isPalindrome;
 }

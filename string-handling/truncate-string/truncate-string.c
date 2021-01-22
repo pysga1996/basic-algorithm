@@ -1,8 +1,28 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
-#include "../main.h"
+#include <common-functions.h>
+
+char* truncateString(char* s);
+
+void truncateStringDemo() {
+    char input[256];
+    int command;
+    printf(">>> Start >>>\n");
+    do {
+        fflush(stdin);
+        printf("Enter a string:\n");
+        scanf("%[^\n]s", input);
+//        fgets (input, 256, stdin);
+        char *result = truncateString(input);
+        printf("%llu\n", strlen(result));
+        printf("Result: %s\n", result);
+        free(result);
+        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
+        command = _getch();
+    } while (command == ENTER_KEY);
+    printf("<<< End <<<\n\n\n");
+}
 
 char* truncateString(char* s) {
     int leftIndex = 0;
@@ -23,27 +43,8 @@ char* truncateString(char* s) {
         }
     }
     int size = rightIndex - leftIndex + 1;
-    char* newS = calloc(sizeof(char), size + 1);
+    char* newS = calloc(size + 1, sizeof(char));
     strncpy(newS, s + leftIndex, size);
-    newS[size + 1] = '\0';
+    newS[size + 1] = TERMINATOR;
     return newS;
-}
-
-void truncateStringDemo() {
-    char input[256];
-    int command;
-    printf(">>> Start >>>\n");
-    do {
-        fflush(stdin);
-        printf("Enter a string:\n");
-        scanf("%[^\n]s", input);
-//        fgets (input, 256, stdin);
-        char *result = truncateString(input);
-        printf("%llu\n", strlen(result));
-        printf("Result: %s\n", result);
-        free(result);
-        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
-    printf("<<< End <<<\n\n\n");
 }

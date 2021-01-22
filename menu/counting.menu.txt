@@ -1,0 +1,8 @@
+---Counting Algorithm---
+1. Common character count
+2. Different values in multiplication table 2
+3. Check equal frequency
+4. Different symbols naive
+5. Different substring trie
+6. Characters rearrangement
+0. Exit

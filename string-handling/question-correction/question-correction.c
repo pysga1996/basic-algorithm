@@ -1,19 +1,57 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
 #include <common-functions.h>
-#include "../main.h"
-#define SPACE ' '
-#define COMMA ','
-#define QUESTION_MARK '?'
-#define TERMINATOR '\0'
 
-void convertChar(char* character) {
-    if (isWordOrDigit(*character) && *character != COMMA && *character != SPACE && *character != QUESTION_MARK) {
-    } else {
-        *character = SPACE;
-    }
+char* questionCorrection(char* s);
+
+void replaceSpace(char* s, char* newS);
+
+void replaceQuestionMark(char* s, char* newS);
+
+void replaceComma(char* s, char* newS);
+
+void replaceUppercase(char* s, char* newS);
+
+void convertChar(char* character);
+
+void questionCorrectionDemo() {
+    char input[256];
+    int command;
+    printf(">>> Start >>>\n");
+    do {
+        fflush(stdin);
+        printf("Enter a question:\n");
+        scanf("%[^\n]s", input);
+//        fgets (input, 256, stdin);
+        char *result = questionCorrection(input);
+        printf("Result: %s\n", result);
+        free(result);
+        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
+        command = _getch();
+    } while (command == ENTER_KEY);
+    printf("<<< End <<<\n\n\n");
+}
+
+char* questionCorrection(char* s) {
+    unsigned long long strLength = strlen(s) * 2;
+    char *tempS1 = calloc(strLength, sizeof(char));
+    replaceSpace(s, tempS1);
+    printf("Replace space: %s\n", tempS1);
+    char *tempS2 = calloc(strLength, sizeof(char));
+
+    replaceQuestionMark(tempS1, tempS2);
+    printf("Replace question mark: %s\n", tempS2);
+    realloc(tempS1, strLength * sizeof(char));
+
+    replaceComma(tempS2, tempS1);
+    printf("Replace comma: %s\n", tempS1);
+    realloc(tempS2, strLength * sizeof(char));
+
+    replaceUppercase(tempS1, tempS2);
+    printf("Replace uppercase: %s\n", tempS2);
+    free(tempS1);
+    return tempS2;
 }
 
 void replaceSpace(char* s, char* newS) {
@@ -39,6 +77,24 @@ void replaceSpace(char* s, char* newS) {
     }
     if (markSpace >= 1) {
         newS[j - 1] = TERMINATOR;
+    } else {
+        newS[j] = TERMINATOR;
+    }
+}
+
+void replaceQuestionMark(char* s, char* newS) {
+    int j = 0;
+    unsigned  long long strLength = strlen(s);
+    for (int i = 0; i < strLength; ++i) {
+        if (i != (strlen(s) - 1) && s[i] == QUESTION_MARK) {
+            continue;
+        }
+        newS[j] = s[i];
+        j++;
+    }
+    if (newS[j - 1 ] != QUESTION_MARK) {
+        newS[j] = QUESTION_MARK;
+        newS[j + 1] = TERMINATOR;
     } else {
         newS[j] = TERMINATOR;
     }
@@ -113,9 +169,9 @@ void replaceComma(char* s, char* newS) {
 void replaceUppercase(char* s, char* newS) {
     int j = 0;
     for (int i = 0; i < strlen(s); ++i) {
-        if (isLowercaseWord(s[i]) && i == 0) {
+        if (isLowercaseCharacter(s[i]) && i == 0) {
             newS[j] = (char) (s[i] - 32);
-        } else if (isUppercaseWord(s[i]) && i > 0) {
+        } else if (isUppercaseCharacter(s[i]) && i > 0) {
             newS[j] = (char) (s[i] + 32);
         } else {
             newS[j] = s[i];
@@ -125,59 +181,9 @@ void replaceUppercase(char* s, char* newS) {
     newS[j] = TERMINATOR;
 }
 
-void replaceQuestionMark(char* s, char* newS) {
-    int j = 0;
-    unsigned  long long strLength = strlen(s);
-    for (int i = 0; i < strLength; ++i) {
-        if (i != (strlen(s) - 1) && s[i] == QUESTION_MARK) {
-            continue;
-        }
-        newS[j] = s[i];
-        j++;
-    }
-    if (newS[j - 1 ] != QUESTION_MARK) {
-        newS[j] = QUESTION_MARK;
-        newS[j + 1] = TERMINATOR;
+void convertChar(char* character) {
+    if (isWordOrDigit(*character) && *character != COMMA && *character != SPACE && *character != QUESTION_MARK) {
     } else {
-        newS[j] = TERMINATOR;
+        *character = SPACE;
     }
-}
-
-char* questionCorrection(char* s) {
-    unsigned long long strLength = strlen(s) * 2;
-    char *tempS1 = calloc(sizeof(char), strLength);
-    replaceSpace(s, tempS1);
-    printf("Replace space: %s\n", tempS1);
-    char *tempS2 = calloc(sizeof(char), strLength);
-
-    replaceQuestionMark(tempS1, tempS2);
-    printf("Replace question mark: %s\n", tempS2);
-    realloc(tempS1, strLength);
-
-    replaceComma(tempS2, tempS1);
-    printf("Replace comma: %s\n", tempS1);
-    realloc(tempS2, strLength);
-
-    replaceUppercase(tempS1, tempS2);
-    printf("Replace uppercase: %s\n", tempS2);
-    free(tempS1);
-    return tempS2;
-}
-
-void questionCorrectionDemo() {
-    char input[256];
-    int command;
-    printf(">>> Start >>>\n");
-    do {
-        fflush(stdin);
-        printf("Enter a question:\n");
-        scanf("%[^\n]s", input);
-//        fgets (input, 256, stdin);
-        char *result = questionCorrection(input);
-        printf("Result: %s\n", result);
-        free(result);
-        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER_KEY);
-    printf("<<< End <<<\n\n\n");
 }

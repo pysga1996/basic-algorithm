@@ -1,6 +1,26 @@
-#include <stdio.h>
 #include <conio.h>
 #include <common-functions.h>
+
+int isPrime(int x);
+
+void isPrimeDemo() {
+    int x, command;
+    printf(">>> Start >>>\n");
+    do {
+        fflush(stdin);
+        printf("Enter number:\n");
+        x = scanInt();
+        int result = isPrime(x);
+        if (result) {
+            printf("%d is a prime:\n", x);
+        } else {
+            printf("%d is not a prime\n", x);
+        }
+        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
+        command = _getch();
+    } while (command == ENTER_KEY);
+    printf("<<< End <<<\n\n\n");
+}
 
 int isPrime(int x) {
     if (x == 2) return 1;
@@ -15,24 +35,6 @@ int isPrime(int x) {
         }
     }
     return isPrime;
-}
-
-void isPrimeDemo() {
-    int x, command;
-    printf(">>> Start >>>\n");
-    do {
-        printf("Enter number:\n");
-        x = scanInt();
-        int result = isPrime(x);
-        if (result) {
-            printf("%d is a prime:\n", x);
-        } else {
-            printf("%d is not a prime", x);
-        }
-        printf("Press ENTER to continue, or any other key to get back to the main menu:\n");
-        command = _getch();
-    } while (command == ENTER);
-    printf("<<< End <<<\n\n\n");
 }
 
 

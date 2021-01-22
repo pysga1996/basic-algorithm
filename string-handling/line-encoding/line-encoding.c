@@ -1,9 +1,7 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
-#include "../main.h"
-#define TERMINATOR '\0'
+#include <common-functions.h>
 
 char* lineEncoding(char* s);
 
