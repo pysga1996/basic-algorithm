@@ -13,4 +13,8 @@ void differentSubstringsTrieDemo();
 
 void charactersRearrangementDemo();
 
+void isPangramDemo();
+
+void differentSquaresDemo();
+
 #endif //BASIC_ALGORITHM_MAIN_H

@@ -7,14 +7,14 @@ int checkEqualFrequency(arr_int inputArray);
 
 void checkEqualFrequencyDemo() {
     int arrLength;
-    arr_int arrInt;
+    arr_int* arrInt;
     int command;
     printf(">>> Start >>>\n");
     do {
         printf("Enter array length:\n");
         arrLength = scanInt();
         arrInt = scanIntArr(arrLength);
-        if (checkEqualFrequency(arrInt)) {
+        if (checkEqualFrequency(*arrInt)) {
             printf("All element frequencies are equal!\n");
         } else {
             printf("All element frequencies are not equal!\n");

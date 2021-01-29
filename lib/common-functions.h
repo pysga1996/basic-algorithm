@@ -28,20 +28,15 @@ extern const int ENTER_KEY;
 
 extern const char* SPECIAL_CHARACTERS;
 
-typedef struct arr_bool {
-    int* arr;
-    int size;
-} arr_bool;
-
-typedef struct matrix_bool {
-    arr_bool* arr;
-    int size;
-} matrix_bool;
-
 typedef struct arr_char{
     char* content;
     unsigned long long length;
 } arr_char;
+
+typedef struct arr_bool {
+    int* arr;
+    int size;
+} arr_bool;
 
 typedef struct arr_string {
     char** arr;
@@ -67,6 +62,11 @@ typedef struct matrix_char {
     arr_char* arr;
     int size;
 } matrix_char;
+
+typedef struct matrix_bool {
+    arr_bool* arr;
+    int size;
+} matrix_bool;
 
 typedef struct matrix_string {
     arr_string* arr;
@@ -118,23 +118,60 @@ void scanString(char* string);
  * Array Utility
  */
 
-arr_int scanIntArr(int length);
+arr_bool* scanBoolArr(int length);
 
-void printIntArr(arr_int arrInt);
+void printBoolArr(arr_bool* arrBool);
 
-void freeIntArr(arr_int arrInt);
+void freeBoolArr(arr_bool* arrBool);
 
-arr_double scanDoubleArr(int length);
+arr_int* scanIntArr(int length);
 
-void printDoubleArr(arr_double arrFloat);
+void printIntArr(arr_int* arrInt);
 
-void freeDoubleArr(arr_double arrFloat);
+void freeIntArr(arr_int* arrInt);
 
-arr_string scanStringArr(int length);
+arr_double* scanDoubleArr(int length);
 
-void printStringArr(arr_string arrString);
+void printDoubleArr(arr_double* arrDouble);
 
-void freeStringArr(arr_string arrString);
+void freeDoubleArr(arr_double* arrDouble);
+
+arr_long* scanLongArr(int length);
+
+void printLongArr(arr_long* arrLong);
+
+void freeLongArr(arr_long* arrLong);
+
+arr_string* scanStringArr(int length);
+
+void printStringArr(arr_string* arrString);
+
+void freeStringArr(arr_string* arrString);
+
+matrix_bool* scantBoolMatrix(int numberOfRows, int numberOfColumns);
+
+void printBoolMatrix(matrix_bool* matrixBool);
+
+void freeBoolMatrix(matrix_bool* matrixBool);
+
+matrix_int* scantIntMatrix(int numberOfRows, int numberOfColumns);
+
+void printIntMatrix(matrix_int* matrixInt);
+
+void freeIntMatrix(matrix_int* matrixInt);
+
+matrix_double* scantDoubleMatrix(int numberOfRows, int numberOfColumns);
+
+void printDoubleMatrix(matrix_double* matrixDouble);
+
+void freeDoubleMatrix(matrix_double* matrixDouble);
+
+matrix_long* scantLongMatrix(int numberOfRows, int numberOfColumns);
+
+void printLongMatrix(matrix_long* matrixLong);
+
+void freeLongMatrix(matrix_long* matrixLong);
+
 
 /*
  * Number Utility

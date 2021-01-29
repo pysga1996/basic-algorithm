@@ -5,4 +5,6 @@
 4. Different symbols naive
 5. Different substring trie
 6. Characters rearrangement
+7. Is Pangram
+8. Different squares
 0. Exit

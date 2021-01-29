@@ -37,6 +37,12 @@ void mapSelection(int selection) {
         case 6:
             charactersRearrangementDemo();
             break;
+        case 7:
+            isPangramDemo();
+            break;
+        case 8:
+            differentSquaresDemo();
+            break;
         default:
             break;
     }

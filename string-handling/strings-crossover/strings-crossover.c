@@ -9,14 +9,15 @@ void stringsCrossoverDemo() {
     char mergedString[512];
     int length;
     int command;
+    arr_string* inputArr;
     printf(">>> Start >>>\n");
     do {
         printf("Enter length of strings array:\n");
         length = scanInt();
-        arr_string inputArr = scanStringArr(length);
+        inputArr = scanStringArr(length);
         printf("Enter merged string:\n");
         scanString(mergedString);
-        int result = stringsCrossover(inputArr, mergedString);
+        int result = stringsCrossover(*inputArr, mergedString);
         freeStringArr(inputArr);
         printf("Result: %d\n", result);
         printf("Press ENTER to continue, or any other key to get back to the main menu:\n");

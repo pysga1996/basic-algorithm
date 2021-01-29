@@ -39,11 +39,11 @@ char* questionCorrection(char* s) {
 
     replaceQuestionMark(tempS1, tempS2);
     printf("Replace question mark: %s\n", tempS2);
-    realloc(tempS1, strLength * sizeof(char));
+    tempS1 = realloc(tempS1, strLength * sizeof(char));
 
     replaceComma(tempS2, tempS1);
     printf("Replace comma: %s\n", tempS1);
-    realloc(tempS2, strLength * sizeof(char));
+    tempS2 = realloc(tempS2, strLength * sizeof(char));
 
     replaceUppercase(tempS1, tempS2);
     printf("Replace uppercase: %s\n", tempS2);
