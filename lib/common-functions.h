@@ -29,8 +29,8 @@ extern const int ENTER_KEY;
 extern const char* SPECIAL_CHARACTERS;
 
 typedef struct arr_char{
-    char* content;
-    unsigned long long length;
+    char* arr;
+    unsigned long long size;
 } arr_char;
 
 typedef struct arr_bool {

@@ -1,6 +1,5 @@
 #include <common-functions.h>
 #include "main.h"
-
 #define EXIT_CODE 0
 
 void mapSelection(int selection);
@@ -9,7 +8,7 @@ int main() {
     int command;
     arr_char *menu = readMenu("counting.menu.txt");
     do {
-        printf("%s", menu->content);
+        printf("%s", menu->arr);
         command = scanInt();
         mapSelection(command);
     } while (command != EXIT_CODE);
