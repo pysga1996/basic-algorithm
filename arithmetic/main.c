@@ -9,7 +9,7 @@ int main() {
     int command;
     arr_char* menu = readMenu("arithmetic.menu.txt");
     do {
-        printf("%s", menu->content);
+        printf("%s", menu->arr);
         command = scanInt();
         mapSelection(command);
     } while (command != EXIT_CODE);

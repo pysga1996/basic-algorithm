@@ -25,8 +25,16 @@ target_link_libraries(string-handling-algorithm libcommon-functions.dll.a)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/counting.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-file(GLOB COUNTING_SRC counting/*.c string-handling/*.h counting/*/*.c counting/*/*.h lib/common-functions.h)
+file(GLOB COUNTING_SRC counting/*.c counting/*.h counting/*/*.c counting/*/*.h lib/common-functions.h)
 
 add_executable(counting-algorithm ${COUNTING_SRC})
 
 target_link_libraries(counting-algorithm libcommon-functions.dll.a)
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/sorting.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+file(GLOB SORTING_SRC sorting/*.c sorting/*.h sorting/*/*.c sorting/*/*.h lib/common-functions.h)
+
+add_executable(sorting-algorithm ${SORTING_SRC})
+
+target_link_libraries(sorting-algorithm libcommon-functions.dll.a)
