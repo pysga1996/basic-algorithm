@@ -1,2 +1,2 @@
 # basic-algorithm
-Basic Algorithm (code in C)
+Basic Algorithm (C)
