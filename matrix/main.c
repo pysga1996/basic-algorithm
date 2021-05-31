@@ -18,6 +18,9 @@ int main() {
 
 void mapSelection(const int selection) {
     switch (selection) {
+        case 1:
+            checkBoardCellColorDemo();
+            break;
         default:
             break;
     }

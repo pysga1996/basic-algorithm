@@ -1,9 +1,9 @@
-
 #include <common-functions.h>
+#include "../main.h"
 
 int isPrime(int x);
 
-void isPrimeDemo() {
+void isPrimeDemo(void ) {
     int x, command;
     printf(">>> Start >>>\n");
     do {

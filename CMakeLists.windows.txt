@@ -8,33 +8,21 @@ include_directories(lib)
 link_directories(lib)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/arithmetic.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
 file(GLOB ARITHMETIC_SRC arithmetic/*.c arithmetic/*.h arithmetic/*/*.c arithmetic/*/*.h lib/common-functions.h)
-
 add_executable(arithmetic-algorithm ${ARITHMETIC_SRC})
-
 target_link_libraries(arithmetic-algorithm libcommon-functions.dll.a)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/string-handling.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
 file(GLOB STRING_HANDLING_SRC string-handling/*.c string-handling/*.h string-handling/*/*.c string-handling/*/*.h lib/common-functions.h)
-
 add_executable(string-handling-algorithm ${STRING_HANDLING_SRC})
-
 target_link_libraries(string-handling-algorithm libcommon-functions.dll.a)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/counting.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
 file(GLOB COUNTING_SRC counting/*.c counting/*.h counting/*/*.c counting/*/*.h lib/common-functions.h)
-
 add_executable(counting-algorithm ${COUNTING_SRC})
-
 target_link_libraries(counting-algorithm libcommon-functions.dll.a)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/sorting.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
 file(GLOB SORTING_SRC sorting/*.c sorting/*.h sorting/*/*.c sorting/*/*.h lib/common-functions.h)
-
 add_executable(sorting-algorithm ${SORTING_SRC})
-
 target_link_libraries(sorting-algorithm libcommon-functions.dll.a)

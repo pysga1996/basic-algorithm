@@ -114,6 +114,8 @@ long double scanLongDouble();
 
 void scanString(char* string);
 
+void scanStringWithSpaces(char* string);
+
 /*
  * Array Utility
  */

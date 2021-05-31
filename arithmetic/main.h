@@ -1,7 +1,7 @@
 #ifndef ARITHMETIC_ALGORITHM_MAIN_H
 #define ARITHMETIC_ALGORITHM_MAIN_H
 
-void isPrimeDemo();
+void isPrimeDemo(void);
 
 void factorSumDemo();
 
