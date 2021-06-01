@@ -3,4 +3,6 @@
 
 void checkBoardCellColorDemo();
 
+void bishopAndPawnDemo();
+
 #endif //BASIC_ALGORITHM_MAIN_H

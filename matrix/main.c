@@ -21,6 +21,9 @@ void mapSelection(const int selection) {
         case 1:
             checkBoardCellColorDemo();
             break;
+        case 2:
+            bishopAndPawnDemo();
+            break;
         default:
             break;
     }
