@@ -24,6 +24,9 @@ void mapSelection(const int selection) {
         case 2:
             bishopAndPawnDemo();
             break;
+        case 3:
+            chessKnightDemo();
+            break;
         default:
             break;
     }

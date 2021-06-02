@@ -5,4 +5,6 @@ void checkBoardCellColorDemo();
 
 void bishopAndPawnDemo();
 
+void chessKnightDemo();
+
 #endif //BASIC_ALGORITHM_MAIN_H
