@@ -9,9 +9,9 @@ void checkBoardCellColorDemo() {
     printf(">>> Start >>>\n");
     do {
         printf("Enter cell 1:\n");
-        scanf("%s", cell1);
+        scanString(cell1);
         printf("Enter cell 2:\n");
-        scanf("%s", cell2);
+        scanString(cell2);
         int result = chessBoardCellColor(cell1, cell2);
         if (result) {
             printf("Cell %s has the same color as cell %s\n", cell1, cell2);
@@ -27,3 +27,4 @@ void checkBoardCellColorDemo() {
 int chessBoardCellColor(const char *cell1, const char *cell2) {
     return ((cell1[0] + cell1[1] + cell2[0] + cell2[1]) % 2 == 0);
 }
+

@@ -11,9 +11,9 @@ void bishopAndPawnDemo() {
     printf(">>> Start >>>\n");
     do {
         printf("Enter bishop's cell:\n");
-        scanf("%s", bishopCell);
+        scanString(bishopCell);
         printf("Enter pawn's cell:\n");
-        scanf("%s", pawnCell);
+        scanString(pawnCell);
         int result = bishopAndPawn(bishopCell, pawnCell);
         if (result) {
             printf("Bishop can eliminate pawn in 1 turn\n");

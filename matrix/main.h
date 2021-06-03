@@ -7,4 +7,6 @@ void bishopAndPawnDemo();
 
 void chessKnightDemo();
 
+void bishopDiagonalDemo();
+
 #endif //BASIC_ALGORITHM_MAIN_H
