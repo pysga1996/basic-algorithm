@@ -30,6 +30,9 @@ void mapSelection(const int selection) {
         case 4:
             bishopDiagonalDemo();
             break;
+        case 5:
+            spiralNumbersDemo();
+            break;
         default:
             break;
     }

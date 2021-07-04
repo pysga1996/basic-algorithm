@@ -3,3 +3,4 @@
 2. Bishop and pawn
 3. Chess knight
 4. Bishop diagonal
+5. Spiral number

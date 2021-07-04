@@ -9,4 +9,6 @@ void chessKnightDemo();
 
 void bishopDiagonalDemo();
 
+void spiralNumbersDemo();
+
 #endif //BASIC_ALGORITHM_MAIN_H

@@ -8,7 +8,7 @@ include_directories(lib)
 link_directories(lib)
 
 # m is lib definition of <math.h>
-set(LINUX_LIB /mnt/f/Programming/C/common-functions/cmake-build-debug/libcommon-functions.so m)
+set(LINUX_LIB /mnt/f/Programming/C/common-functions/cmake-build-debug-wsl/libcommon-functions.so m)
 
 #file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/menu/arithmetic.menu.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(GLOB ARITHMETIC_SRC arithmetic/*.c arithmetic/*.h arithmetic/*/*.c arithmetic/*/*.h lib/common-functions.h)

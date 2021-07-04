@@ -148,25 +148,25 @@ void printStringArr(arr_string* arrString);
 
 void freeStringArr(arr_string* arrString);
 
-matrix_bool* scantBoolMatrix(int numberOfRows, int numberOfColumns);
+matrix_bool* scanBoolMatrix(int numberOfRows, int numberOfColumns);
 
 void printBoolMatrix(matrix_bool* matrixBool);
 
 void freeBoolMatrix(matrix_bool* matrixBool);
 
-matrix_int* scantIntMatrix(int numberOfRows, int numberOfColumns);
+matrix_int* scanIntMatrix(int numberOfRows, int numberOfColumns);
 
 void printIntMatrix(matrix_int* matrixInt);
 
 void freeIntMatrix(matrix_int* matrixInt);
 
-matrix_double* scantDoubleMatrix(int numberOfRows, int numberOfColumns);
+matrix_double* scanDoubleMatrix(int numberOfRows, int numberOfColumns);
 
 void printDoubleMatrix(matrix_double* matrixDouble);
 
 void freeDoubleMatrix(matrix_double* matrixDouble);
 
-matrix_long* scantLongMatrix(int numberOfRows, int numberOfColumns);
+matrix_long* scanLongMatrix(int numberOfRows, int numberOfColumns);
 
 void printLongMatrix(matrix_long* matrixLong);
 
