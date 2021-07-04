@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include <common-functions.h>
+#include <common-utility.h>
+#include <common-string.h>
 
 char* questionCorrection(char* s);
 

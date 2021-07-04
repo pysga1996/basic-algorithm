@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 char* lineEncoding(char* s);
 

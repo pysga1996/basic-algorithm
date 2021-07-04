@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 int bishopAndPawn(char *bishop, char *pawn);
 

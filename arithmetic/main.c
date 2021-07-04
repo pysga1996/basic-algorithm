@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include <common-functions.h>
 #include "main.h"
+#include <common-utility.h>
+#include <common-string.h>
+
 #define EXIT_CODE 0
 
 void mapSelection(int selection);

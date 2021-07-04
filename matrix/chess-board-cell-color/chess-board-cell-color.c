@@ -1,4 +1,4 @@
-#include <common-functions.h>
+#include <common-utility.h>
 
 int chessBoardCellColor(const char *cell1, const char *cell2);
 

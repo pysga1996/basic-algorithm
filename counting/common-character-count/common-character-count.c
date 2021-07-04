@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include <common-functions.h>
+#include <common-utility.h>
+#include <common-number.h>
 
 int commonCharacterCount(char* s1, char* s2);
 

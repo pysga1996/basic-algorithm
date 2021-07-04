@@ -1,4 +1,5 @@
-#include <common-functions.h>
+#include <common-utility.h>
+#include <common-string.h>
 #include "main.h"
 
 #define EXIT_CODE 0
@@ -32,6 +33,12 @@ void mapSelection(const int selection) {
             break;
         case 5:
             spiralNumbersDemo();
+            break;
+        case 6:
+            sudokuCheckingDemo();
+            break;
+        case 7:
+            findPathDemo();
             break;
         default:
             break;

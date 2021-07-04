@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <common-functions.h>
+#include <common-utility.h>
+#include <common-matrix.h>
+#include <common-string.h>
 
 int differentSquares(matrix_int matrix);
 
@@ -36,14 +38,14 @@ void differentSquaresDemo() {
 //    (matrixInt->arr)[4].arr[1] = 2;
 //    (matrixInt->arr)[4].arr[2] = 1;
     int result, command;
-    matrix_int* matrixInt;
+    matrix_int *matrixInt;
     printf(">>> Start >>>\n");
     do {
         printf("Enter number of rows:\n");
         int numberOfRows = scanInt();
         printf("Enter number of columns:\n");
         int numberOfColumns = scanInt();
-        matrixInt = scantIntMatrix(numberOfRows, numberOfColumns);
+        matrixInt = scanIntMatrix(numberOfRows, numberOfColumns);
         printIntMatrix(matrixInt);
         printf("\n");
         result = differentSquares(*matrixInt);

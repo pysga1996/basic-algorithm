@@ -1,5 +1,4 @@
-#include <common-functions.h>
-#include "../main.h"
+#include <common-utility.h>
 
 int isPrime(int x);
 

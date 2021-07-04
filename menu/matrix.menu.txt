@@ -4,3 +4,6 @@
 3. Chess knight
 4. Bishop diagonal
 5. Spiral number
+6. Sudoku checking
+7. Find path
+

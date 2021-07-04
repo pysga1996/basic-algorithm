@@ -1,4 +1,5 @@
-#include <common-functions.h>
+#include <common-utility.h>
+#include <common-string.h>
 #include "main.h"
 #define EXIT_CODE 0
 

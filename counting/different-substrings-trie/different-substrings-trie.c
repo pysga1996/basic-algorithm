@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 /*
  * dùng vòng lặp đếm số chuỗi có độ dài 1, 2, ..., n ký tự

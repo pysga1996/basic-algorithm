@@ -1,5 +1,5 @@
 #include <string.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 int checkPalindrome(char *inputString);
 

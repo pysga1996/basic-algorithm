@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 int factorSum(int n);
 

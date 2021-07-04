@@ -11,4 +11,8 @@ void bishopDiagonalDemo();
 
 void spiralNumbersDemo();
 
+void sudokuCheckingDemo();
+
+void findPathDemo();
+
 #endif //BASIC_ALGORITHM_MAIN_H

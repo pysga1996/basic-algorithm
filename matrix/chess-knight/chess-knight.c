@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 int chessKnight(const char *cell);
 

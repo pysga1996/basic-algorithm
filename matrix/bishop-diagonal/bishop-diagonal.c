@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <common-functions.h>
+#include <common-utility.h>
 
 arr_string bishopDiagonal(char *bishop1, char *bishop2);
 

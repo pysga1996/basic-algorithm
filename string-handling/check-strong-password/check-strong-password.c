@@ -1,6 +1,6 @@
 #include <string.h>
 #include <stdlib.h>
-#include <common-functions.h>
+#include <common-utility.h>
 #define PSWD_MIN_LENGTH 6
 
 int checkStrongPassword(char *password);
